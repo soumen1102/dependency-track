@@ -99,7 +99,7 @@
         <lib.junit-params.version>1.1.1</lib.junit-params.version>
         <lib.log4j-over-slf4j.version>2.0.6</lib.log4j-over-slf4j.version>
         <!-- JDBC Drivers -->
-        <lib.jdbc-driver.mssql.version>11.2.3.jre17</lib.jdbc-driver.mssql.version>
+        <lib.jdbc-driver.mssql.version>11.2.4.jre8</lib.jdbc-driver.mssql.version>
         <!-- Leave at 8.0.29 until https://github.com/datanucleus/datanucleus-rdbms/issues/446 is resolved! -->
         <lib.jdbc-driver.mysql.version>8.0.29</lib.jdbc-driver.mysql.version>
         <lib.jdbc-driver.postgresql.version>42.5.1</lib.jdbc-driver.postgresql.version>
@@ -455,8 +455,7 @@
                         <phase>prepare-package</phase>
                         <configuration>
                             <target>
-                                <copy file="${project.build.directory}/bom.json"
-                                      tofile="${project.build.directory}/${project.artifactId}/.well-known/sbom"/>
+                                <copy file="${project.build.directory}/bom.json" tofile="${project.build.directory}/${project.artifactId}/.well-known/sbom"/>
                             </target>
                         </configuration>
                         <goals>
